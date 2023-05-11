@@ -1,0 +1,21 @@
+/*
+Here is an example program in C++ that asks the user for two numbers and then displays the sum of those two numbers
+*/
+
+#include <iostream>
+
+int main() {
+    int num1, num2, sum; // declare three integer variables
+
+    std::cout << "Enter the first number: ";
+    std::cin >> num1; // read user input and store in num1 variable
+
+    std::cout << "Enter the second number: ";
+    std::cin >> num2; // read user input and store in num2 variable
+
+    sum = num1 + num2; // calculate the sum of num1 and num2
+
+    std::cout << "The sum of " << num1 << " and " << num2 << " is " << sum << std::endl;
+
+    return 0;
+}
