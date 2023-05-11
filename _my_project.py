@@ -11,6 +11,7 @@ with open('input_file.txt', 'r') as f_in, open('output_file.txt', 'w') as f_out:
             if before_comment:
                 f_out.write(before_comment)
             continue
+            
         if '*/' in line:  # кінець сесії ігнорування
             ignore_section = False
             line = line.split('*/')[1]  # виводимо частину рядка після символів */
@@ -18,4 +19,4 @@ with open('input_file.txt', 'r') as f_in, open('output_file.txt', 'w') as f_out:
             continue
         if '/' in line:
             line = line.split('/')[0] + '\n'
-        f_out.write(line)
+        f_out.write(line)# write result
