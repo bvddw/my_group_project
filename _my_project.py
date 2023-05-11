@@ -1,5 +1,6 @@
 with open('input_file.txt', 'r') as f_in, open('output_file.txt', 'w') as f_out:
     ignore_section = False  # прапор, який вказує, чи потрібно ігнорувати поточну секцію
+
     while True:
         line = f_in.readline()
         if not line:
@@ -8,7 +9,7 @@ with open('input_file.txt', 'r') as f_in, open('output_file.txt', 'w') as f_out:
             ignore_section = True
             before_comment = line.split('/*')[0]  # виводимо частину рядка до символів /*
             if before_comment:
-                f_out.write(before_comment + '\n')
+                f_out.write(before_comment)
             continue
         if '*/' in line:  # кінець сесії ігнорування
             ignore_section = False
